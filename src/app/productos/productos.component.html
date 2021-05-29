@@ -1,0 +1,52 @@
+<app-header></app-header>
+<div class="container my-3">
+<div class="card border-primary mb-3">
+  <div class="card-header">Porductos</div>
+  <div class="card-body text-primary">
+    <h5 class="card-title">Listado de Productos</h5>
+    <div class="my-2 text-left">
+      <button class="btn btn-rounded btn-primary" type="button" [routerLink]="['/productos/form']">
+        Crear Producto
+      </button>
+    </div>
+    <table class="table table-bordered table-striped">
+      <thead>
+        <tr>
+          <th>id</th>
+          <th>codigo</th>
+          <th>producto</th>
+          <th>precio</th>
+          <th>fecha</th>
+          <th>cantidad</th>
+          <th>usuario registro</th>
+          <th>usuario actualiza</th>
+          <th>
+            editar
+          </th>
+          <th>eliminar</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let producto of productos">
+          <td>{{ producto.id }}</td>
+          <td>{{ producto.codigo }}</td>
+          <td>{{ producto.nombreProd }}</td>
+          <td>{{ producto.precioProd }}</td>
+          <td>{{ producto.fechaRegistro }}</td>
+          <td>{{ producto.cantidad }}</td>
+          <td>{{ producto.usuarioRegistro }}</td>
+          <td>{{ producto.usuarioUpate }}</td>
+          <td>
+            <button type="button" name="editar" [routerLink]="['/productos/form', producto.id]" class="btn btn-primary btn-sm">editar</button>
+          </td>
+          <td>
+            <button type="button" name="eliminar" (click)='delete(producto)' class="btn btn-danger btn-sm">eliminar</button>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+
+  </div>
+</div>
+</div>
+<app-footer></app-footer>

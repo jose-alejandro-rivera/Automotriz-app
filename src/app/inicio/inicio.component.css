@@ -1,0 +1,8 @@
+.image-fondo {
+    background: url("/assets/img/auto.png");
+    background-repeat: no-repeat;
+    background-position: center center;
+    height: 650px;
+    background-attachment: fixed;
+
+}

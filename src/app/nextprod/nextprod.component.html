@@ -1,0 +1,15 @@
+<app-header></app-header>
+<div class="container my-3">
+<button type="button" (click)="setHabilitar()" class="btn btn-primary my-3">{{ habilitar==true? 'Ocultar': 'Mostrar' }}</button>
+
+<div class="card">
+  <div class="card-header text-white bg-success" >
+    Listado de Proximos Productos a registrar
+  </div>
+
+  <ul class="list-group" *ngIf="habilitar == true">
+    <li class="list-group-item" *ngFor="let producto of listaProducto">{{ producto }}</li>
+  </ul>
+</div>
+</div>
+<app-footer></app-footer>

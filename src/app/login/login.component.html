@@ -1,0 +1,38 @@
+
+<head>
+
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.8/css/solid.css">
+  <script src="https://use.fontawesome.com/releases/v5.0.7/js/all.js"></script>
+
+
+</head>
+<body>
+  <nav class="navbar navbar-expand-lg navbar-dark" style="background-color:#5269f0;">
+    <a class="navbar-brand" routerLink="#"> {{ title }}</a>
+  
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+     
+    </div>
+  </nav>
+  
+<div class="modal-dialog text-center">
+  <div class="col-sm-8 main-section">
+      <div class="modal-content">
+          <div class="col-12 user-img">
+              <img src="/assets/img/automotriz.jpg" />
+          </div>
+          <form class="col-12" method="post">
+              <div class="form-group" id="user-group">
+                  <input type="text" class="form-control" placeholder="Nombre de usuario" [(ngModel)]="username" name="username"/>
+              </div>
+              <div class="form-group" id="contrasena-group">
+                  <input type="password" class="form-control" placeholder="Contrasena" [(ngModel)]="password" name="password"/>
+              </div>
+              <button type="submit" class="btn btn-primary" (click)="doLogin()"><i class="fas fa-sign-in-alt"></i>  Ingresar </button>
+          </form>
+
+      </div>
+  </div>
+</div>
+</body>
+<app-footer></app-footer>
